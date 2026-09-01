@@ -1,0 +1,11 @@
+{
+  "name": "FACTOR PROTEGE",
+  "description": "Herramienta técnica de evaluación de riesgos de seguridad privada conforme al DS 209 y Ley 21.659.",
+  "requestFramePermissions": [
+    "microphone",
+    "geolocation"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

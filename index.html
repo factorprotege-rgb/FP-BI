@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FACTOR PROTEGE - Matriz de Riesgo</title>
+    <!-- Script de limpieza inicial radical -->
+    <script>
+      document.documentElement.classList.remove('dark');
+      localStorage.setItem('darkMode', 'false');
+    </script>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              mono: ['JetBrains Mono', 'monospace'],
+            },
+            colors: {
+              brand: {
+                50: '#e8f0fe',
+                100: '#d2e3fc',
+                200: '#aecbfa',
+                300: '#8ab4f8',
+                400: '#669df6',
+                500: '#1a73e8', 
+                600: '#1967d2',
+                700: '#185abc',
+                800: '#174ea6',
+                900: '#103056',
+              },
+              google: {
+                blue: '#1a73e8',
+                red: '#d93025',
+                yellow: '#f9ab00',
+                green: '#1e8e3e',
+                gray: '#5f6368',
+              },
+              slate: {
+                50: '#f8f9fa',
+                100: '#f1f3f4',
+                200: '#e8eaed',
+                300: '#dadce0',
+                400: '#bdc1c6',
+                500: '#9aa0a6',
+                600: '#80868b',
+                700: '#5f6368',
+                800: '#3c4043', 
+                900: '#202124',
+              }
+            },
+            boxShadow: {
+              'google': '0 1px 2px 0 rgba(60,64,67,.3), 0 1px 3px 1px rgba(60,64,67,.15)',
+            }
+          }
+        }
+      }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <style>
+      body { -webkit-font-smoothing: antialiased; background-color: #f8f9fa !important; color: #3c4043 !important; }
+      .google-input {
+        transition: all 0.2s;
+        border: 1px solid #dadce0;
+        background: #fff !important;
+        color: #202124 !important;
+      }
+      .google-input:focus {
+        border-color: #1a73e8;
+        box-shadow: 0 0 0 1px #1a73e8;
+      }
+      @keyframes slideUp {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      .animate-slide-up { animation: slideUp 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards; }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.35.0",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "recharts": "https://esm.sh/recharts@^3.6.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-[#f8f9fa] text-[#3c4043] font-sans">
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
